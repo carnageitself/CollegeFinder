@@ -5,9 +5,9 @@ import Navbar from "./components/navbar/Navbar";
 export default function Home() {
   return (
    <div className="home">
-    <Navbar/>
+    {/* <Navbar/> */}
     <Hero/>
-    <Footer/>
+    {/* <Footer/> */}
    </div>
   )
 }

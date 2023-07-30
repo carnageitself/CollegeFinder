@@ -1,7 +1,18 @@
 import Link from "next/link";
 import React from "react";
 
+interface User {
+  id: number;
+  name: string;
+}
+
 const Hero: React.FC = () => {
+
+const currentuser: User = {
+  id: 1,
+  name: "Yash Harale",
+}
+
   return (
     <div className="hero h-[100vh] w-full bg-[#0c0c0c] text-white flex justify-center">
       <div className="heroContainer flex items-center flex-col">
@@ -12,7 +23,10 @@ const Hero: React.FC = () => {
       </div>
       </div>
       <div className="bottom mt-12 flex items-center gap-10">
+      <Link href={ currentuser ? "/" : "/login"}>
         <button className="w-32 h-10 border rounded-lg">Get Started</button>
+        </Link>
+       
         <Link href ="/about">
         <button className="w-32 h-10 border rounded-lg">Learn More</button>
         </Link>

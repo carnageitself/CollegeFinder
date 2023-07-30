@@ -1,8 +1,6 @@
-
 import Link from "next/link";
 import React from "react";
 import logo from "../../../public/next.svg"
-import Image from "next/image";
 
 interface navItem {
   id: number;
@@ -10,8 +8,17 @@ interface navItem {
   url: string;
 }
 
+interface User {
+  id: number;
+  name: string;
+}
+
 const Navbar: React.FC = () => {
 
+  const currentuser: User = {
+    id: 1,
+    name: "Yash Harale",
+  }
 
   const nav: navItem[] = [
     {
@@ -38,25 +45,19 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="navbar w-full h-20 bg-[#121212] text-white flex justify-between items-center">
+    <div className="navbar w-full h-20 bg-[#121212] text-white flex justify-between items-center absolute">
         <div className="left ml-10">
           <Link href="/">
-          <Image src={logo} alt="" className="cursor-pointer h-12 w-12"/>
+          <img src={logo} alt="" className="cursor-pointer h-12 w-12"/>
           </Link>
         </div>
         <div className="center">
-          {/* {nav.map((item) => ( */}
-            <Link  href={'/'} className="p-10 text-lg uppercase">Home</Link>
-            <Link  href={'/topcolleges'} className="p-10 text-lg uppercase">TopColleges</Link>
-
-            <Link  href={'/admission'} className="p-10 text-lg uppercase">Admission</Link>
-            <Link  href={'/about'} className="p-10 text-lg uppercase">About</Link>
-            <Link  href={'/contact'} className="p-10 text-lg uppercase">Contact</Link>
-
-          {/* ))} */}
+          {nav.map((item) => (
+            <Link key={item.id} href={item.url} className="p-10 text-lg uppercase">{item.title}</Link>
+          ))}
         </div>
         <div className="right mr-10">
-          <button>Log out</button>
+          <button>{currentuser ? "Log out": "Log in" }</button>
         </div>
       </div>
   );

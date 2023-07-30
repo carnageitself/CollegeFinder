@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { title } from "process";
 import React from "react";
+import logo from "../../../public/next.svg"
 
 interface navItem {
   id: number;
@@ -35,21 +35,21 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="navbar w-full h-20 bg-[#121212] text-white">
-      <div className="navbarContainer flex items-center justify-between">
-        <div className="left">
-          <img src="" alt="" />
+    <div className="navbar w-full h-20 bg-[#121212] text-white flex justify-between items-center">
+        <div className="left ml-10">
+          <Link href="/">
+          <img src={logo} alt="" className="cursor-pointer h-12 w-12"/>
+          </Link>
         </div>
         <div className="center">
           {nav.map((item) => (
-            <Link key={item.id} href={item.url}>{item.title}</Link>
+            <Link key={item.id} href={item.url} className="p-10 text-lg uppercase">{item.title}</Link>
           ))}
         </div>
-        <div className="right">
-          <button></button>
+        <div className="right mr-10">
+          <button>Log out</button>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 import type { Metadata } from "next";
-
-
 
 export const metadata: Metadata = {
   title: "Admission",
@@ -9,9 +7,7 @@ export const metadata: Metadata = {
 };
 
 const Admission = () => {
-  return (
-    <div>admission</div>
-  )
-}
+  return <div>admission</div>;
+};
 
 export default Admission;

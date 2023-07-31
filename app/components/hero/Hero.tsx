@@ -23,7 +23,7 @@ const currentuser: User = {
       </div>
       </div>
       <div className="bottom mt-12 flex items-center gap-10">
-      <Link href={ currentuser ? "/" : "/login"}>
+      <Link href={ currentuser ? "#" : "/login"}>
         <button className="w-32 h-10 border rounded-lg">Get Started</button>
         </Link>
        

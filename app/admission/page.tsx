@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-// import AdmissionTimeline from "../components/timeline/AdmissionTimeline";
+import AdmissionTimeline from "../components/timeline/AdmissionTimeline";
 
 export const metadata: Metadata = {
   title: "Admission",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const Admission = () => {
   return <div className="admission h-full">
-    {/* <AdmissionTimeline/> */}
+    <AdmissionTimeline/>
   </div>;
 };
 

@@ -1,39 +1,60 @@
-import Link from "next/link";
+"use client";
+import { motion } from "framer-motion";
+import "../../Extra/style.css";
+import Image from "next/image";
 import React from "react";
-
 interface User {
   id: number;
   name: string;
 }
 
 const Hero: React.FC = () => {
-
-const currentuser: User = {
-  id: 1,
-  name: "Yash Harale",
-}
+  const currentuser: User = {
+    id: 1,
+    name: "Yash Harale",
+  };
+const animatedWord="Unlock Your Potential, Embrace Your Future: Your Journey Starts Here " 
 
   return (
-    <div className="hero h-[100vh] w-full bg-[#0c0c0c] text-white flex justify-center">
-      <div className="heroContainer flex items-center flex-col">
-      <div className="top h-80"></div>
-      <div className="center text-center flex items-center justify-center flex-col">
-      <div className="bg-gradient-to-r from-cyan-400 to-purple-600 inline-block text-transparent bg-clip-text text-6xl mx-60 font-semibold">
-        <h1>"Unlock Your Potential, Embrace Your Future: Your Journey Starts Here!"</h1>
-      </div>
-      </div>
-      <div className="bottom mt-12 flex items-center gap-10">
-      <Link href={ currentuser ? "#" : "/login"}>
-        <button className="w-32 h-10 border rounded-lg">Get Started</button>
-        </Link>
-       
-        <Link href ="/about">
-        <button className="w-32 h-10 border rounded-lg">Learn More</button>
-        </Link>
-      </div>
+    <div className="h-{100} w-full">
+      <div className="grid grid-cols-2 ">
+        <motion.div className="ml-5 relative main__center"
+
+          initial={{ opacity: 0, x: -10}}
+          animate={{ x: -10, y: -10 ,opacity:1}}
+          transition={{ delay: 0.9 }}
+          exit={{ x: 0, y: 0 ,opacity:0}}
+        >
+          <h1 className="text-3xl text-center">
+            {" "}
+            "Unlock Your Potential, Embrace Your Future: Your Journey Starts
+            Here !"
+          </h1>
+          <div className="custom__btn mt-5">
+            <a className="anchor" href="#">
+              {" "}
+              Register
+            </a>
+          </div>
+        </motion.div>
+        <motion.div
+          className="img mt-2"
+          initial={{ opacity: 0, x: -10}}
+          animate={{ x: -10, y: -10 ,opacity:1}}
+          transition={{ delay: 0.9 }}
+          exit={{ x: 0, y: 0 ,opacity:0}}
+        >
+          <Image
+            src="./leftmain.svg"
+            width={600}
+            height={600}
+            alt="img"
+            className="transform -scale-x-100"
+          />
+        </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Hero;

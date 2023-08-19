@@ -92,7 +92,7 @@ const Navbar = () => {
     name: "Yash Harale",
   };
   return (
-    <nav className="bg-gray-400 p-4 content-center">
+    <nav className="bg-black/30 p-4 content-center">
       <motion.div
         className="container mx-auto flex justify-between items-center"
         initial={{ opacity: 0, y: -10, }}

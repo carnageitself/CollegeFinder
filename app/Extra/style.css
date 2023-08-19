@@ -27,5 +27,21 @@
   top: 40%;
 }
 
+.footer {
+  background-color: #090909;
+}
 
+.footer ul {
+  list-style: none;
+}
+.footer ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
 
+.footer ul li a:hover {
+  border-bottom: 5px solid orange;
+  transition: ease-in 0.7s;
+  transform-origin: left;
+}

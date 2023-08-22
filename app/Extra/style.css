@@ -1,30 +1,10 @@
-.custom__btn {
-  display: flex;
-  justify-content: center;
-}
-.anchor {
-  box-shadow: 4px 4px 0px 0px #b5d7ef, -4px -4px 0px 0px #e8e9eb;
-  cursor: pointer;
-  transition: 0.3s all ease;
-  border-radius: 3px;
-  background-color: #b5d7ef;
-  color: rgb(34, 33, 33) !important;
-  font-weight: 300;
-  padding: 20px 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
 
-.anchor:hover {
-  /* box-shadow:  0 0px 3px 22px #e4e0e0; */
-  box-shadow: -4px -4px 0px 0px #b5d7ef, 4px 4px 0px 0px #e8e9eb;
-  cursor: pointer;
-}
-
-.main__center {
-  position: relative;
-  top: 40%;
+@media only screen and (min-width: 320px) and (max-width: 750px){
+  .res {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .footer {

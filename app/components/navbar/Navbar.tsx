@@ -101,6 +101,7 @@ const Navbar = () => {
         transition={{ duration: 0.7 }}
       >
         <div className="text-white font-bold text-xl">
+          <Link href="/">
           <Image
             src="/logo.png"
             width={60}
@@ -108,10 +109,11 @@ const Navbar = () => {
             alt="logo"
             className="cursor-pointer"
           />
+          </Link>
         </div>
         <div className="hidden md:flex space-x-4">
           <Link
-            href="#"
+            href="/"
             className="text-white hover:text-gray-800 hover:bg-slate-50 p-2 rounded-md  transition-all"
           >
             Home

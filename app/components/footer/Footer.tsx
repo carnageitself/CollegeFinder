@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="footer w-{100} h-{100} p-20 grid grid-cols-2">
-      <div className="logo ml-30">
+      <div className="logo ml-30 flex justify-start items-center ">
         {" "}
         <Image
           src="/logo.png"
@@ -15,7 +15,7 @@ const Footer = () => {
         
       </div>
       <div className="grid grid-cols-1 ">
-        <ul className="text-md text-center">
+        <ul className="text-md">
           <li className="text-black pb-5 hover:border-b-black-{5px} ">
             <a href="/">Home</a>
           </li>
